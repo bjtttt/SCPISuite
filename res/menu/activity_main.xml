@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/menu_connectinstrument" 
+        android:orderInCategory="96"
+        android:showAsAction="never"
+        android:title="@string/menu_connectinstrument" />
+    
+    <item 
+        android:id="@+id/menu_disconnectinstrument" 
+        android:orderInCategory="97"
+        android:showAsAction="never"
+        android:title="@string/menu_disconnectinstrument" />
+    
+    <item 
+        android:id="@+id/menu_connectserver" 
+        android:orderInCategory="98"
+        android:showAsAction="never"
+        android:title="@string/menu_connectserver" />
+    
+    <item 
+        android:id="@+id/menu_disconnectserver" 
+        android:orderInCategory="99"
+        android:showAsAction="never"
+        android:title="@string/menu_disconnectserver" />
+    
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_settings"/>
+    
+</menu>

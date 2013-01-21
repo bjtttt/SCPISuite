@@ -1,15 +1,100 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/pager_scpi"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ScpiActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etxt_scpiscpi"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/title_sectionscpi" />
+        android:ems="10" >
 
-</RelativeLayout>
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/imgbtn_scpisend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scpisend"
+            android:background="@android:color/transparent" />
+        
+        <LinearLayout
+            android:layout_width="10dip"
+        	android:layout_height="wrap_content" />
+        
+        <ImageButton
+            android:id="@+id/imgbtn_scpisendquery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scpisendquery"
+            android:background="@android:color/transparent" />
+          
+        <LinearLayout 
+            android:layout_width="10dip"
+        	android:layout_height="wrap_content" />
+        
+        <ImageButton
+            android:id="@+id/imgbtn_scpiquery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scpiquery"
+            android:background="@android:color/transparent" />
+               
+        <LinearLayout 
+            android:layout_width="10dip"
+        	android:layout_height="wrap_content" />
+        
+        <ImageButton
+            android:id="@+id/imgbtn_scpiread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scpiread"
+            android:background="@android:color/transparent" />
+                
+        <LinearLayout 
+            android:layout_width="10dip"
+        	android:layout_height="wrap_content" />
+        
+        <ImageButton
+            android:id="@+id/imgbtn_scpistop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_scpistop"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtv_scpilog"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ProgressBar
+            android:id="@+id/pbar_scpitiming"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/txtv_scpitiming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textview_scpitiming" />"
+
+    </LinearLayout>
+
+</LinearLayout>

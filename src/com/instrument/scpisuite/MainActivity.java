@@ -29,7 +29,7 @@ public class MainActivity extends FragmentActivity {
 	private final static int SECTION_INDEX_BATCH = 3;
 	private final static int SECTION_INDEX_DATA = 4;
 	private final static int SECTION_INDEX_LOG = 5;
-	
+
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
 	 * fragments for each of the sections. We use a
@@ -39,14 +39,14 @@ public class MainActivity extends FragmentActivity {
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
-	
-	private List<Fragment> mFragList = new ArrayList<Fragment>();
-	private HashMap<String, Object> mHMSettings = new HashMap<String, Object>();
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
+
+	private List<Fragment> mFragList = new ArrayList<Fragment>();
+	private HashMap<String, Object> mHMSettings = new HashMap<String, Object>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +59,9 @@ public class MainActivity extends FragmentActivity {
 				getSupportFragmentManager());
 
 		// Set up the ViewPager with the sections adapter.
-		mViewPager = (ViewPager) findViewById(R.id.pager_main);
+		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
-		
+
 		mFragList.add(new TreeSectionFragment(mHMSettings));
 		mFragList.add(new ScpiSectionFragment(mHMSettings));
 		mFragList.add(new HistorySectionFragment(mHMSettings));
@@ -89,16 +89,6 @@ public class MainActivity extends FragmentActivity {
 
 		@Override
 		public Fragment getItem(int position) {
-			/*
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a DummySectionFragment (defined as a static inner class
-			// below) with the page number as its lone argument.
-			Fragment fragment = new DummySectionFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args);
-			return fragment;
-			*/
 			if(position < 0)
 				position = 0;
 			if(position > SECTION_MAX_COUNT -1)
@@ -108,7 +98,6 @@ public class MainActivity extends FragmentActivity {
 
 		@Override
 		public int getCount() {
-			// Show 6 total pages.
 			return SECTION_MAX_COUNT;
 		}
 

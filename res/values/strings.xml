@@ -20,5 +20,7 @@
     <string name="menu_disconnectinstrument">Disconnect Instrument</string>
     <string name="menu_connectserver">Connect Server</string>
     <string name="menu_disconnectserver">Disconnect Server</string>
-    
+
+    <string name="textview_scpitiming">00:00:00.0</string>
+    		    
 </resources>

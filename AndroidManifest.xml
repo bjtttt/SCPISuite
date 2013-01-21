@@ -22,14 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.instrument.scpisuite.ScpiActivity"
-            android:label="@string/title_activity_scpi"
-            android:parentActivityName="android.support.v4.app.FragmentActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.support.v4.app.FragmentActivity" />
-        </activity>
     </application>
 
 </manifest>

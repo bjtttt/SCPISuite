@@ -22,13 +22,22 @@ import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity {
 
-	private final static int SECTION_MAX_COUNT = 6;
-	private final static int SECTION_INDEX_TREE = 0;
-	private final static int SECTION_INDEX_SCPI= 1;
-	private final static int SECTION_INDEX_HISTORY = 2;
-	private final static int SECTION_INDEX_BATCH = 3;
-	private final static int SECTION_INDEX_DATA = 4;
-	private final static int SECTION_INDEX_LOG = 5;
+	public final static int SECTION_MAX_COUNT = 6;
+	public final static int SECTION_INDEX_TREE = 0;
+	public final static int SECTION_INDEX_SCPI= 1;
+	public final static int SECTION_INDEX_HISTORY = 2;
+	public final static int SECTION_INDEX_BATCH = 3;
+	public final static int SECTION_INDEX_DATA = 4;
+	public final static int SECTION_INDEX_LOG = 5;
+	
+	public final static String HMSETTINGS_INSTRUMENT_NAME = "Instrument Name";
+	public final static String HMSETTINGS_INSTRUMENT_TIMEOUT = "Instrument Timeout";
+	public final static String HMSETTINGS_INSTRUMENT_CONNECTED = "Instrument Connected";
+	public final static String HMSETTINGS_INSTRUMENT_CONNECTION = "Instrument Connection";
+	public final static String HMSETTINGS_SERVER_NAME = "Server Name";
+	public final static String HMSETTINGS_SERVER_TIMEOUT = "Server Timeout";
+	public final static String HMSETTINGS_SERVER_CONNECTED = "Server Connected";
+	public final static String HMSETTINGS_SERVER_CONNECTION = "Server Connection";
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -62,12 +71,25 @@ public class MainActivity extends FragmentActivity {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 
+		// Initiate settings
+		mHMSettings.put(HMSETTINGS_INSTRUMENT_NAME, "");
+		mHMSettings.put(HMSETTINGS_INSTRUMENT_TIMEOUT, 5000);
+		mHMSettings.put(HMSETTINGS_INSTRUMENT_CONNECTED, false);
+		mHMSettings.put(HMSETTINGS_INSTRUMENT_CONNECTION, null);
+		mHMSettings.put(HMSETTINGS_SERVER_NAME, "");
+		mHMSettings.put(HMSETTINGS_SERVER_TIMEOUT, 5000);
+		mHMSettings.put(HMSETTINGS_SERVER_CONNECTED, false);
+		mHMSettings.put(HMSETTINGS_SERVER_CONNECTION, null);
+		
+		// Initiate fragments
 		mFragList.add(new TreeSectionFragment(mHMSettings));
 		mFragList.add(new ScpiSectionFragment(mHMSettings));
 		mFragList.add(new HistorySectionFragment(mHMSettings));
 		mFragList.add(new BatchSectionFragment(mHMSettings));
 		mFragList.add(new DataSectionFragment(mHMSettings));
 		mFragList.add(new LogSectionFragment(mHMSettings));
+		
+		mViewPager.setCurrentItem(SECTION_INDEX_SCPI);
 	}
 
 	@Override

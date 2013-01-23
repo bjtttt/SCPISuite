@@ -22,5 +22,13 @@
     <string name="menu_disconnectserver">Disconnect Server</string>
 
     <string name="textview_scpitiming">00:00:00.0</string>
+
+    <string name="imgbtn_scpisend">Send</string>
+    <string name="imgbtn_scpisendquery">Send amp; Query</string>
+    <string name="imgbtn_scpiquery">Query</string>
+    <string name="imgbtn_scpiread">Read</string>
+    <string name="imgbtn_scpistop">Stop</string>
+    
+    <string name="etxt_scpiscpihint">Please input a SCPI command.</string>
     		    
 </resources>

@@ -29,6 +29,17 @@
     <string name="imgbtn_scpiread">Read</string>
     <string name="imgbtn_scpistop">Stop</string>
     
-    <string name="etxt_scpiscpihint">Please input a SCPI command.</string>
+    <string name="etxt_scpicommandhint">Please input the SCPI command.</string>
+    <string name="etxt_scpiparameterhint">Please input the parameter.</string>
+    
+    <string name="txtv_scpicommand">Command</string>
+    <string name="txtv_scpiparameter">Parameter</string>
+
+    <string name="txtv_conninstconnstr">Config Connection</string>
+    <string name="etxt_conninstconnstr">Hostname|IP[::inst[number]]</string>
+    
+    <string name="imgbtn_conninstselect">Select</string>
+    <string name="imgbtn_conninstok">OK</string>
+    <string name="imgbtn_conninstcancel">Cancel</string>
     		    
 </resources>

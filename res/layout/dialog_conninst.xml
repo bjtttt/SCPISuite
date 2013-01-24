@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dip" >
+
+    <TextView
+        android:id="@+id/txtv_conninstconnstr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txtv_conninstconnstr"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Target"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/etxt_conninstconnstr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/etxt_conninstconnstr" >
+        <requestFocus />
+    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timeout"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/etxt_conninsttimeout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/etxt_conninstconnstr" >
+        <requestFocus />
+    </EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dip"
+        android:background="@android:color/transparent" >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip" >
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_conninstselectinst"
+            android:contentDescription="@string/imgbtn_conninstselect" />
+        <LinearLayout 
+            android:layout_width="0dip"
+        	android:layout_height="wrap_content"
+        	android:background="@android:color/transparent"
+        	android:layout_weight="1" >
+
+        </LinearLayout>
+        
+        <ImageButton
+            android:id="@+id/imgbtn_conninstok"
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_conninstok"
+            android:contentDescription="@string/imgbtn_conninstok" />
+        
+        <LinearLayout
+            android:layout_width="10dip"
+        	android:layout_height="wrap_content"
+        	android:background="@android:color/transparent" />        
+        <ImageButton
+            android:id="@+id/imgbtn_conninstcancel"
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_conninstcancel"
+            android:contentDescription="@string/imgbtn_conninstcancel" />        
+        </LinearLayout>
+</LinearLayout>

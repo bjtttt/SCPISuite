@@ -5,35 +5,66 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ScpiActivity" >
-    <EditText
-        android:id="@+id/etxt_scpiscpi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/etxt_scpiscpihint"
-        android:inputType="text" >
-        <requestFocus />
-    </EditText>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtv_scpicommand"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:text="@string/txtv_scpicommand"
+            android:textAlignment="viewEnd"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etxt_scpicommand"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/etxt_scpicommandhint"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/txtv_scpiparameter"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:text="@string/txtv_scpiparameter"
+            android:textAlignment="viewEnd"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etxt_scpiparameter"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/etxt_scpiparameterhint"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip" >
         <ImageButton
             android:id="@+id/imgbtn_scpisend"
-            android:layout_width="wrap_content"
+            android:layout_width="45dip"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/imgbtn_scpisend"
-            android:src="@drawable/ic_scpisend" />        
+            android:background="@drawable/ic_scpisend"
+            android:contentDescription="@string/imgbtn_scpisend" />        
         <LinearLayout
             android:layout_width="10dip"
         	android:layout_height="wrap_content"
         	android:background="@android:color/transparent" />        
         <ImageButton
             android:id="@+id/imgbtn_scpisendquery"
-            android:layout_width="wrap_content"
+            android:layout_width="45dip"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_scpisendquery"
-            android:background="@android:color/transparent"
+            android:background="@drawable/ic_scpisendquery"
             android:contentDescription="@string/imgbtn_scpisendquery" />          
         <LinearLayout 
             android:layout_width="10dip"
@@ -41,10 +72,9 @@
         	android:background="@android:color/transparent" />        
         <ImageButton
             android:id="@+id/imgbtn_scpiquery"
-            android:layout_width="wrap_content"
+            android:layout_width="45dip"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_scpiquery"
-            android:background="@android:color/transparent"
+            android:background="@drawable/ic_scpiquery"
             android:contentDescription="@string/imgbtn_scpiquery" />               
         <LinearLayout 
             android:layout_width="10dip"
@@ -52,10 +82,9 @@
         	android:background="@android:color/transparent" />        
         <ImageButton
             android:id="@+id/imgbtn_scpiread"
-            android:layout_width="wrap_content"
+            android:layout_width="45dip"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_scpiread"
-            android:background="@android:color/transparent"
+            android:background="@drawable/ic_scpiread"
             android:contentDescription="@string/imgbtn_scpiread" />                
         <LinearLayout 
             android:layout_width="10dip"
@@ -63,10 +92,9 @@
         	android:background="@android:color/transparent" />        
         <ImageButton
             android:id="@+id/imgbtn_scpistop"
-            android:layout_width="wrap_content"
+            android:layout_width="45dip"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_scpistop"
-            android:background="@android:color/transparent"
+            android:background="@drawable/ic_scpistop"
             android:contentDescription="@string/imgbtn_scpistop" />                
         <LinearLayout 
             android:layout_width="0dip"
@@ -75,17 +103,19 @@
         	android:layout_weight="1" />        
         <ImageButton
             android:id="@+id/imgbtn_scpioptions"
-            android:layout_width="wrap_content"
+            android:layout_width="45dip"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_scpioptions"
-            android:background="@android:color/transparent"
+            android:background="@drawable/ic_scpioptions"
             android:contentDescription="@string/imgbtn_scpistop" />        
     </LinearLayout>
+
     <TextView
         android:id="@+id/txtv_scpilog"
         android:layout_width="match_parent"
         android:layout_height="0dip"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
